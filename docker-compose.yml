@@ -35,6 +35,8 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
     image: hyperpro-client
     container_name: hyperpro-react-client
     command: npm run start
