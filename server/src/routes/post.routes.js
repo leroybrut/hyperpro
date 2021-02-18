@@ -35,7 +35,6 @@ postRouter.get("/:post_id", (req, res, next) => {
      });
 });
 
-
 /* Add Single Post */
 postRouter.post("/", (req, res, next) => {
   let newPost = {
