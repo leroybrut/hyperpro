@@ -10,7 +10,7 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
-
+ENV NODE_PATH=/usr/app/node_modules/.bin
 # copy local files to app folder
 COPY . .
 
