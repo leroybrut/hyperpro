@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import style from './Dashboard.module.scss';
+import { Helmet } from 'react-helmet';
 
 const Dashboard = (props) => {
 
@@ -6,8 +8,13 @@ const Dashboard = (props) => {
     console.log(user);
     return(
         <>
-            {user._id}
-            {user.username}
+        <Helmet>
+            <title>Hyperpro - Dashboard</title>
+        </Helmet>
+            <div className={style.User}>
+                <p>User ID: {user._id}</p>
+                <p>Username: {user.username}</p>
+            </div>
         </>
     )
 }

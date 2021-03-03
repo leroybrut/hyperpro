@@ -1,0 +1,15 @@
+.User{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: red;
+    color: #fff;
+    border-radius: 5px;
+    p {
+        margin: 0;
+        text-align: left;
+    }
+}
