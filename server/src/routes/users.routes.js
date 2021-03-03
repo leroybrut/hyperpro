@@ -16,7 +16,22 @@ userRoutes.get('/', (req, res, next) => {
         });
     });
 });
-/* Add Single Post */
+userRoutes.get("/:username", (req, res, next) => {
+  User.findOne({username: req.params.username}, function (err, result) {
+      if(err){
+          console.log("User not found");
+           res.status(400).send({
+             success: false,
+             error: err.message
+           });
+      }
+      res.status(200).send({
+          success: true,
+          data: result
+      });
+   });
+});
+
 userRoutes.post("/", (req, res, next) => {
   let newUser = {
     username: req.body.username,
