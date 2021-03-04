@@ -15,6 +15,9 @@ const Dashboard = (props) => {
                 <p>User ID: {user._id}</p>
                 <p>Username: {user.username}</p>
             </div>
+            <div className={style.Container}>
+                ie
+            </div>
         </>
     )
 }
