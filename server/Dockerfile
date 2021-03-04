@@ -12,7 +12,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 RUN npm install
-
+ENV NODE_PATH=/usr/src/app/node_modules/.bin
 # Copy app source code
 COPY . .
 

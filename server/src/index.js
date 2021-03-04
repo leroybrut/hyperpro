@@ -26,6 +26,7 @@ app.use('/api/users', userRouter);
 
 app.get('/', function(req, res){
   res.send('Hello! from the Server');
+  console.log('hello');
 });
 
 app.listen(PORT, function () {

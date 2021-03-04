@@ -18,6 +18,7 @@ userRoutes.get('/', (req, res, next) => {
 });
 userRoutes.get("/:username", (req, res, next) => {
   User.findOne({username: req.params.username}, function (err, result) {
+
       if(err){
           console.log("User not found");
            res.status(400).send({
@@ -25,10 +26,12 @@ userRoutes.get("/:username", (req, res, next) => {
              error: err.message
            });
       }
+      console.log('Found user', result);
       res.status(200).send({
           success: true,
           data: result
       });
+
    });
 });
 
