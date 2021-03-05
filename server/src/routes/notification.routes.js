@@ -55,9 +55,9 @@ notificationRoutes.post("/", (req, res, next) => {
   });
 });
 
-notificationRoutes.delete('/delete/:id', function (req, res) {
+notificationRoutes.delete("/delete/:id", function (req, res) {
     var id = req.body.id;
-    Notification.deleteOne({ _id: new mongo.ObjectId(id) }, function (err, results) {
+    Notification.deleteOne({ _id: id }, function (err, results) {
     });
     res.json({ success: id })
   });
