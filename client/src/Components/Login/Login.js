@@ -62,7 +62,7 @@ import {
     if (fetched) {
         return (
         <Switch>
-            <Route path="/dashboard">
+            <Route absolute path="/dashboard">
                 <Dashboard user={user} />
             </Route>
         </Switch>
